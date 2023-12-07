@@ -1,4 +1,4 @@
-package firebolt182.example.homework2.office;
+package firebolt.example.homework2.office;
 
 public class Runner {
     Boss boss = new Boss("Петр Николаевич");

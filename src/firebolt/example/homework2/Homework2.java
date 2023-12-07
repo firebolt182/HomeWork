@@ -1,7 +1,6 @@
-package firebolt182.example.homework2;
+package firebolt.example.homework2;
 
-import firebolt182.example.homework2.office.Runner;
-
+import firebolt.example.homework2.office.Runner;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -61,8 +60,8 @@ public class Homework2 {
     }
 
     public static void ex4() {
-        firebolt182.example.homework2.shop.Runner runner =
-                new firebolt182.example.homework2.shop.Runner();
+        firebolt.example.homework2.shop.Runner runner =
+                new firebolt.example.homework2.shop.Runner();
         runner.show();
     }
 

@@ -1,4 +1,4 @@
-package firebolt182.example.homework2.shop;
+package firebolt.example.homework2.shop;
 
 public class Runner {
     Item hammer = new Item("Hammer", 1000);

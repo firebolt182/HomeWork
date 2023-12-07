@@ -1,4 +1,4 @@
-package firebolt182.example.homework2.shop;
+package firebolt.example.homework2.shop;
 
 import java.util.Arrays;
 
@@ -15,7 +15,8 @@ public class Shop {
 
     public void showWorkers() {
         for (Worker worker : this.workers) {
-            System.out.println(worker.getName() + ": " + worker.getAge() + " лет, " + worker.getGender()
+            System.out.println(worker.getName() + ": " + worker.getAge()
+                    + " лет, " + worker.getGender()
                     + ", список вещей: " + Arrays.toString(worker.getItems()));
         }
     }

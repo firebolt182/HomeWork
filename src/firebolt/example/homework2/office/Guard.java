@@ -1,4 +1,4 @@
-package firebolt182.example.homework2.office;
+package firebolt.example.homework2.office;
 
 public class Guard {
     private String name;
