@@ -19,7 +19,7 @@ public class Worker {
         return gender;
     }
 
-    public Worker(String name, int age, Gender gender, Item[] items){
+    public Worker(String name, int age, Gender gender, Item[] items) {
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -29,9 +29,11 @@ public class Worker {
     public Item[] getItems() {
         return items;
     }
-    public void showItems(){
+
+    public void showItems() {
         //{Имя работника}: смотрите какая у меня вещь - {имя вещи}.
-        for(Item item : items)
-        System.out.println(this.name + ": смотрите какая у меня вещь - " + item.getName());
+        for (Item item : items) {
+            System.out.println(this.name + ": смотрите какая у меня вещь - " + item.getName());
+        }
     }
 }
