@@ -16,6 +16,14 @@ public final class City {
         this.houses = copyHouse;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public House[] getHouses() {
+        return houses;
+    }
+
     @Override
     public String toString() {
         return "City{"

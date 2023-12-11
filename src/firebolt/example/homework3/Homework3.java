@@ -56,14 +56,17 @@ public class Homework3 {
         House house1 = new House("Mira", 66);
         House house2 = new House("Tolstogo", 99);
         House[] houses = {house1, house2};
-        System.out.println("hh : " + houses.hashCode());
         City city = new City("city17", houses);
         System.out.println(city);
         for (House house : houses) {
             house.setHouseNumber(11111111);
             house.setStreet("Another st.");
         }
-        System.out.println(city);
+        House[] cityHouses = city.getHouses();
+        for (House house : cityHouses) {
+            System.out.println(house.getStreet());
+            System.out.println(house.getHouseNumber());
+        }
 
     }
 }
