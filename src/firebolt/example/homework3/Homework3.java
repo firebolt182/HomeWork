@@ -46,9 +46,14 @@ public class Homework3 {
     }
 
     public static void ex4() {
-        for (int i = 0; i < 110; i++) {
-            new LotteryTicket().checkFortune();
+        LotteryTicket[] tickets = new LotteryTicket[100];
+        for (int i = 0; i < tickets.length; i++) {
+            tickets[i] = new LotteryTicket();
         }
+        for (LotteryTicket ticket : tickets) {
+            ticket.checkFortune();
+        }
+
         System.out.println(LotteryTicket.getSummary());
     }
 

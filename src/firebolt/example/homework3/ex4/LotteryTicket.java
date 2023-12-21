@@ -1,15 +1,16 @@
 package firebolt.example.homework3.ex4;
 
 public class LotteryTicket {
-    private static int ticketNumber;
+    private int ticketNumber;
+    private static int counter = 1;
     private static int summary = 0;
+    public LotteryTicket() {
+        ticketNumber = counter;
+        counter++;
+    }
 
     public static int getSummary() {
         return summary;
-    }
-
-    public LotteryTicket() {
-        ticketNumber++;
     }
 
     public void checkFortune() {
