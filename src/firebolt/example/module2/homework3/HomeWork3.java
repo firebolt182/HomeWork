@@ -21,7 +21,6 @@ import java.util.*;
 public class HomeWork3 {
     public static void main(String[] args) {
         ex1();
-        ex1dot2();
         ex3();
         ex4();
         ex5();
@@ -53,41 +52,6 @@ public class HomeWork3 {
                     feedBack.getValue().getText(), feedBack.getValue().getLike(),
                     feedBack.getValue().getLocalDateTime().toLocalDate(),
                     feedBack.getValue().getLocalDateTime().toLocalTime());
-
-        }
-    }
-
-    public static void ex1dot2() {
-        FeedBack feedBack5 = new FeedBack(5, "test5", 43,
-                LocalDateTime.of(2023, Month.NOVEMBER, 5, 23, 22));
-        FeedBack feedBack2 = new FeedBack(2, "test2", 44,
-                LocalDateTime.of(2023, Month.NOVEMBER, 5, 23, 59));
-        FeedBack feedBack3 = new FeedBack(2, "test3", 50,
-                LocalDateTime.of(2023, Month.NOVEMBER, 5, 19, 59));
-        FeedBack feedBack4 = new FeedBack(4, "test4", 50,
-                LocalDateTime.of(2023, Month.NOVEMBER, 5, 15, 59));
-        FeedBack feedBack1 = new FeedBack(1, "test1", 46,
-                LocalDateTime.of(2023, Month.NOVEMBER, 5, 11, 51));
-
-        Comparator<FeedBack> comparator = (FeedBack fb1, FeedBack fb2) -> {
-            int compare = Long.compare(fb2.getLike(), fb1.getLike());
-            if (compare == 0) {
-                return fb2.getLocalDateTime().compareTo(fb1.getLocalDateTime());
-            }
-            return compare;
-        };
-        TreeSet<FeedBack> feedBacks = new TreeSet<>(comparator);
-        feedBacks.add(feedBack5);
-        feedBacks.add(feedBack4);
-        feedBacks.add(feedBack2);
-        feedBacks.add(feedBack3);
-        feedBacks.add(feedBack1);
-        int feedBackCount = 1;
-        for (FeedBack feedBack : feedBacks) {
-            System.out.printf("Отзыв №%d: %d, %s, %d, %s %s\n", feedBackCount++, feedBack.getId(),
-                    feedBack.getText(), feedBack.getLike(),
-                    feedBack.getLocalDateTime().toLocalDate(),
-                    feedBack.getLocalDateTime().toLocalTime());
         }
     }
 
