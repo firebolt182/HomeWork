@@ -10,8 +10,8 @@ import java.util.stream.Stream;
 
 public class HomeWork4 {
     public static void main(String[] args) {
-        ex1();
         try {
+            ex1();
             ex2();
             ex3();
         } catch (Exception e) {
