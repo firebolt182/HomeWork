@@ -2,7 +2,7 @@ package firebolt.example.module2.homework4;
 
 import firebolt.example.module2.homework4.ex1.Car;
 import firebolt.example.module2.homework4.ex3.SkyScrapper;
-
+import firebolt.example.module2.homework4.ex4.Mask;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
@@ -10,14 +10,14 @@ import java.util.stream.Stream;
 
 public class HomeWork4 {
     public static void main(String[] args) {
-        try {
+        /*try {
             ex1();
             ex2();
             ex3();
         } catch (Exception e) {
             System.out.println(e.getMessage());
-        }
-
+        }*/
+        ex4();
     }
 
     public static void ex1() {
@@ -76,5 +76,13 @@ public class HomeWork4 {
         } else {
             highest.forEach(System.out::println);
         }
+    }
+
+    public static void ex4() {
+        System.out.println(Mask.textMask("<client>(Какие то данные)"
+                + "<data>79991113344;test@yandex.ru;Иванов Иван Иванович</data></client>"));
+        System.out.println(Mask.textMask("<client>(Какие то данные)<data></data></client>"));
+        System.out.println(Mask.textMask("<client>(Какие то данные)"
+                + "<data>Иванов Иван Иванович;79991113344</data></client>"));
     }
 }
